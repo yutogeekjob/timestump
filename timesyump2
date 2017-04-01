@@ -1,0 +1,25 @@
+<%-- 
+    Document   : timestump
+    Created on : 2017/04/01, 13:52:09
+    Author     : yuto
+--%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.Date"%>
+<%@page import="java.util.Calendar"%>
+<%
+Date date =new Date();
+SimpleDateFormat d=new SimpleDateFormat("yyyy年MM月dd日HH時mm分ss秒");
+String sd=d.format(date);
+out.print(sd);
+%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <h1></h1>
+    </body>
+</html>
