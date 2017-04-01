@@ -1,0 +1,27 @@
+<%-- 
+    Document   : timestump
+    Created on : 2017/04/01, 13:52:09
+    Author     : yuto
+--%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.Date"%>
+<%@page import="java.util.Calendar"%>
+<%
+Calendar cal=Calendar.getInstance();
+cal.set(2016,10,4,10,0,0);
+Date calpast =cal.getTime();
+SimpleDateFormat d=new SimpleDateFormat("yyyy-MM-dd HH：mm：ss");
+String sd=d.format(calpast);
+out.print(sd);
+%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <h1></h1>
+    </body>
+</html>
