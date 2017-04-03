@@ -1,0 +1,49 @@
+<%-- 
+    Document   : timestump
+    Created on : 2017/04/01, 13:52:09
+    Author     : yuto
+--%>
+<%@page import="java.io.BufferedReader"%>
+<%@page import="java.io.FileReader"%>
+<%@page import="java.io.File"%>
+<%@page import="java.io.FileWriter"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.Date"%>
+<%@page import="java.util.Calendar"%>
+<%
+File txt=new File("test.txt");
+String path=txt.getAbsolutePath();
+//1ログファイル開始
+FileWriter fw =new FileWriter(path);
+fw.write("2017.4.3 start\r\n");
+fw.close();
+//2処理
+String a ="a";
+if(a.equals("a")){
+out.print("合致しました。");
+}
+else{
+out.print("合致しませんでした。");
+}
+//3ログファイル終了
+FileWriter fw2 =new FileWriter(path,true);
+fw2.write("2017.4.3 end\r\n");
+fw2.close();
+//4ログファイル読み込み
+FileReader fr=new FileReader(txt);
+BufferedReader br =new BufferedReader(fr);
+out.println(br.readLine());
+out.println(br.readLine());
+br.close();
+%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <h1></h1>
+    </body>
+</html>
